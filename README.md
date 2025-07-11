@@ -1,6 +1,8 @@
 # Insight Platform — AI Signal Connector Prototype
 
-> **Modular Agentic System for Curated AI Insights Using LangGraph + Ollama**
+## Agent System, Protocol Design, and Modular LLM Architecture
+
+**Modular Agentic System for Curated AI Insights Using LangGraph + Ollama**
 
 ---
 
