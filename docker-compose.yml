@@ -1,0 +1,31 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+      - ./data/output:/app/data/output
+    depends_on:
+      - ollama
+
+  streamlit:
+    build: ./streamlit_ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
+    volumes:
+      - ./logs:/app/logs
+      - ./data/output:/app/data/output
+  
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_models:/root/.ollama
+
+volumes:
+  ollama_models:
+

@@ -1,0 +1,6 @@
+trafilatura
+ollama
+streamlit
+fastapi
+uvicorn
+langgraph
